@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>contacts</title>
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="dashboard">
+        <div class="logo">
+          <p>SaaS Kit</p>
+        </div>
+        <div class="avatar">
+          <img src="./img/avatar-img.svg" alt="" class="avatar-img" />
+          <div class="avatar-info">
+            <p class="avatar-name">Sierra Ferguson</p>
+            <p class="avatar-surname">s.ferguson@gmail.com</p>
+          </div>
+        </div>
+        <div class="dashboard-menu">
+          <div class="menu">
+            <img src="./img/dashboard.svg" alt="" />
+            <a href="">Dashboard</a>
+          </div>
+          <div class="menu">
+            <img src="./img/tasks.svg" alt="" />
+            <a href="">Tasks</a>
+          </div>
+          <div class="menu">
+            <img src="./img/email.svg" alt="" />
+            <a href="">Email</a>
+          </div>
+          <div class="menu">
+            <img src="./img/contacts.svg" alt="" />
+            <a href="">Contacts</a>
+          </div>
+          <div class="menu">
+            <img src="./img/chat.svg" alt="" />
+            <a href="">Chat</a>
+          </div>
+          <div class="menu">
+            <img src="./img/deals.svg" alt="" />
+            <a href="">Deals</a>
+          </div>
+        </div>
+        <div class="settings">
+          <img src="./img/dot.svg" alt="" />
+          <a href="">Settings</a>
+        </div>
+      </div>
+      <div class="main">
+        <div class="search">
+          <img src="./img/search.svg" alt="" />
+          <input type="text" placeholder="Search for a contact" />
+          <img src="./img/bloodier.svg" alt="" />
+        </div>
+        <div class="auto">
+          <div class="company">
+            <p>Company: <samp>All</samp></p>
+            <button class="btn-add" onclick="openModal()">Add contact</button>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Company name</th>
+                <th>Role</th>
+                <th>Forecast</th>
+                <th>Recent activity</th>
+                <th>-/-</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="modal__container">
+        <form class="contact__form">
+          <div class="modal__header">
+            <h1>Tite</h1>
+            <button type="button" class="modal__close" onclick="closeModal()">&times;</button>
+          </div>
+          <div class="modal__body">
+            <input type="text" placeholder="Name" class="name" />
+            <input type="text" placeholder="Email" class="email" />
+            <input type="text" placeholder="Company " class="companyInput" />
+            <input type="text" placeholder="Role" class="role" />
+            <input type="text" placeholder="Forecast" class="forecast" />
+            <input type="date" placeholder="Recent activity" class="activity" />
+          </div>
+          <div class="modal__footer">
+            <button class="modal__btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
